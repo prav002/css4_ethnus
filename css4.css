@@ -1,9 +1,4 @@
 /* Basic Reset for Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
 /* Style for the Side Navigation */
 .sidenav {
