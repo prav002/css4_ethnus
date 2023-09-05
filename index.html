@@ -3,15 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css4.css" >
     <title>Side Nav Buttons</title>
+    <style>
+        /* Add CSS styles for the side navigation */
+        .sidenav {
+            height: 100%;
+            width: 200px;
+            position: fixed;
+            top: 0;
+            left: 0; /* Change to 0 to make it initially visible */
+            background-color: #333;
+            overflow-x: hidden;
+            transition: 0.3s;
+            padding-top: 60px;
+        }
+
+        .sidenav a {
+            padding: 15px 25px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #fff;
+            display: block;
+            transition: 0.2s;
+        }
+
+        .sidenav a:hover {
+            background-color: #555;
+        }
+
+        /* Style for the container */
+        .container {
+            margin-left: 220px;
+            padding: 20px;
+        }
+
+        /* Style for the toggle button */
+        .toggle-btn {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            cursor: pointer;
+            color: #fff;
+        }
+    </style>
 </head>
 <body>
-    <div class="sidenav">
-        <a href="https://drive.google.com/drive/folders/1ZZpDgjLgqk9u1si01tHokBz4fqUaYjjE">Button 1</a>
+    <div class="toggle-btn" onclick="toggleNav()">☰</div> <!-- Add a toggle button -->
+    
+    <div class="sidenav" id="sidenav">
+        <a href="#">Button 1</a>
         <a href="#">Button 2</a>
         <a href="#">Button 3</a>
         <a href="#">Button 4</a>
     </div>
+
+    <div class="container">
+        <!-- Your main content goes here -->
+        <h1>Main Content</h1>
+        <p>This is your main content area.</p>
+    </div>
+
+    <script>
+        // JavaScript function to toggle the side navigation menu
+        function toggleNav() {
+            var sidenav = document.getElementById("sidenav");
+            if (sidenav.style.left === "0px") {
+                sidenav.style.left = "-200px";
+            } else {
+                sidenav.style.left = "0px";
+            }
+        }
+    </script>
 </body>
 </html>
