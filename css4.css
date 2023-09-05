@@ -1,0 +1,39 @@
+/* Basic Reset for Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style for the Side Navigation */
+.sidenav {
+    width: 200px;
+    height: 100%;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    left: -200px;
+    transition: left 0.3s ease-in-out;
+}
+
+.sidenav a {
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+    color: #fff;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.sidenav a:hover {
+    background-color: #555;
+}
+
+/* Show the Side Navigation on Hover */
+.sidenav:hover {
+    left: 0;
+}
+
+/* Hide the Side Navigation when not hovered */
+.sidenav:not(:hover) {
+    left: -200px;
+}
